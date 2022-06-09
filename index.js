@@ -31,7 +31,7 @@ const run = async () => {
 
     //API to get all users
     app.get("/users", async (req, res) => {
-      const users = await usersCollection.find({}).limit(5).toArray();
+      const users = await usersCollection.find({}).toArray();
       res.send(users); 
     });
 
